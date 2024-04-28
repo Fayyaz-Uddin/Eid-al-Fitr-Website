@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- Royal Tutorials -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Eid al-Fitr</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section id="scene">
+        <h2 id="text">Eid al-Fitr</h2>
+        <img src="01.png" id="img1">
+        <img src="02.png" id="img2">
+        <img src="03.png" id="img3">
+        <img src="04.png" id="img4">
+    </section>
+    <div class="sec">
+        <h2>Eid al-Fitr</h2>
+        <p>Eid al-Fitr is one of two major holidays celebrated by Muslims and commemorates the end of the holy month of Ramadan, in which Muslims fast daily from before dawn until sunset. It is commemorated by a large, community-wide prayer service in the morning, followed by meals and conversation with friends and family. A mandatory charity called Zakat al-Fitr is collected before the prayer and distributed to the poor and needy to ensure all can participate in the festivities. Eid al-Fitr is the Arabic name for the holiday, though it goes by many other names in other languages.</p>
+    </div>
+    <script>
+        let text = document.getElementById("text");
+        let img1 = document.getElementById("img1");
+        let img2 = document.getElementById("img2");
+        let img3 = document.getElementById("img3");
+
+
+        window.addEventListener("scroll", function(){
+            let value = window.scrollY;
+            text.style.marginTop = value * -1.5+'px';
+            img1.style.top = value * 0.75+'px';
+            img2.style.top = value * 0.5+'px';
+            img3.style.top = value * 0.25+'px';
+        })
+    </script>
+</body>
+</html>
